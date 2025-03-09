@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Exemplo</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100vw;
+            height: 100vh;
+
+            overflow: hidden;
+        }
+
+        p {
+            max-width: 400px;
+            text-align: center;
+        }
+
+        #ação {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, cupiditate itaque! Reiciendis illum tenetur quaerat id dolorum consequuntur consectetur ea natus, explicabo rem tempore est aspernatur ullam eius veritatis beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, saepe. Qui corporis placeat aliquid, adipisci rem laboriosam iste! Ipsum sed est eum nisi vel voluptatum accusamus earum quos reprehenderit quia.</p>
+
+    <p id="ação"></p>
+
+    <script>
+        document.getElementById('paragrafo').addEventListener('mouseenter', () => {
+            document.getElementById('ação').innerHTML = 'Mouse Dentro ?';
+        })
+
+        document.getElementById('paragrafo').addEventListener('mouseout', () => {
+            document.getElementById('ação').innerHTML = 'Mouse Fora ?';
+        })
+    </script>
+</body>
+</html>
